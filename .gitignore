@@ -1,0 +1,16 @@
+﻿# dependencies
+**/node_modules
+
+# next build
+**/.next
+**/out
+
+# env
+**/.env*
+
+# logs
+logs/**/*.log
+
+# os/editor
+.DS_Store
+Thumbs.db
