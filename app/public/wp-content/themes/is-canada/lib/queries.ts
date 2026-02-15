@@ -90,6 +90,7 @@ export const GET_SITE_SETTINGS = gql`
     }
   }
 `;
+<<<<<<< HEAD
 
 // 读取首页（URI）的 ACF 字段组
 // 注意：`homePageTest` 依赖 ACF 字段组 GraphQL Field Name。
@@ -118,3 +119,5 @@ export const GET_HOME_PAGE_FALLBACK = gql`
     }
   }
 `;
+=======
+>>>>>>> ed0cd2101aeaa540f501bb7a6a53dc0c2bc0ea35

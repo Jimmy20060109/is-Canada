@@ -59,6 +59,7 @@ export interface PageResponse {
 export interface SiteSettingsResponse {
   generalSettings: SiteSettings;
 }
+<<<<<<< HEAD
 
 export interface HomePageAcfFields {
   heroTitle?: string | null;
@@ -83,3 +84,5 @@ export interface HomePageWithAcfResponse {
 export interface HomePageFallbackResponse {
   pageBy: HomePageNode | null;
 }
+=======
+>>>>>>> ed0cd2101aeaa540f501bb7a6a53dc0c2bc0ea35
