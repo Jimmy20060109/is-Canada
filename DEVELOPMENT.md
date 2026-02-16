@@ -20,7 +20,7 @@
 ### 2. 安装依赖
 
 ```bash
-cd "c:\Users\Lenovo\Local Sites\iscanada-local\app\public\wp-content\themes\is-canada"
+cd "c:\Users\Lenovo\Local Sites\iscanada-local"
 npm install
 ```
 
@@ -31,6 +31,8 @@ npm run dev
 ```
 
 访问：`http://localhost:3000`
+
+说明：前端源码统一在仓库根目录；`app/public/wp-content/themes/is-canada` 仅保留为 Headless 占位主题，不再放置 Next.js 源码。
 
 ## 📁 项目结构
 

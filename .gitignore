@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-﻿# dependencies
-**/node_modules
-
-# next build
-**/.next
-**/out
-
-# env
-**/.env*
-
-# logs
-logs/**/*.log
-
-# os/editor
-.DS_Store
-Thumbs.db
-=======
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
-/node_modules
+**/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -28,28 +8,30 @@ Thumbs.db
 !.yarn/releases
 !.yarn/versions
 
+# next build
+**/.next
+**/out
+
 # testing
 /coverage
-
-# next.js
-/.next/
-/out/
 
 # production
 /build
 
-# misc
-.DS_Store
-*.pem
+# env
+**/.env*
 
-# debug
+# logs
+logs/**/*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# misc
+.DS_Store
+Thumbs.db
+*.pem
 
 # vercel
 .vercel
@@ -57,4 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
->>>>>>> ed0cd2101aeaa540f501bb7a6a53dc0c2bc0ea35

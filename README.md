@@ -1,10 +1,9 @@
 # is-Canada Frontend (Headless WordPress + Next.js)
 
-This Next.js app is intentionally stored inside the WordPress theme directory:
-
-`app/public/wp-content/themes/is-canada`
+This repository now uses a single Next.js frontend source at the repository root.
 
 WordPress is only used as CMS. The frontend UI is fully controlled by Next.js.
+The `app/public/wp-content/themes/is-canada` folder is a minimal placeholder theme for headless mode.
 
 ## Stack
 
@@ -34,7 +33,7 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Folder Structure (theme scoped frontend)
+## Folder Structure (single frontend source)
 
 ```text
 is-canada/
@@ -42,6 +41,7 @@ is-canada/
 │   ├── page.tsx               # Home page (ACF + fallback)
 │   ├── layout.tsx
 │   └── posts/[slug]/page.tsx  # Post detail
+├── app/public/                # WordPress files (CMS runtime)
 ├── lib/
 │   ├── graphql-client.ts
 │   ├── queries.ts
@@ -90,14 +90,6 @@ This is the cleanest headless architecture and easiest to scale.
 ### Option B (static export only for fully static pages)
 
 Use `next export` style deployment only if pages do not require server rendering, auth, or dynamic server features.
-
-### Option C (keep frontend in theme folder)
-
-Code location inside the theme is fine for repository organization, but deployment should still treat Next.js as an app build artifact:
-
-1. Build in `wp-content/themes/is-canada`
-2. Deploy `.next`, `public`, `package.json`, lockfile, and runtime dependencies
-3. Start with `npm run start` behind reverse proxy
 
 ## Troubleshooting
 
