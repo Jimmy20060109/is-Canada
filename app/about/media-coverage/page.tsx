@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const hardCerts = [
   "国际认证青少年生涯规划师团队",
@@ -17,54 +17,48 @@ const mediaPartners = [
   "校方与社区活动现场报道",
 ];
 
-const logoWall = [
-  "CCTV",
-  "HDSB ISP",
-  "School Partner",
-  "Community Media",
-  "Education Forum",
-  "Parent Voices",
-];
+const logoWall = ["CCTV", "HDSB ISP", "School Partner", "Community Media", "Education Forum", "Parent Voices"];
 
 const userQuotes = [
-  "关于孩子出国留学，我们家庭做得最正确的一件事，就是选择您做我们的留学顾问。您非常有爱心、做事又清晰、条理，阅历又非常好，未来几年还请你们继续对学业、生活等予以引导、规划、鼓励！",
-  "收到爱普比通知书非常惊喜！很感谢你们团队的帮助，整个过程所体现的专业性和热情，让我们全家表示由衷的赞叹！🌹🌹🌹",
-  "你们不是只把孩子送出去，而是在每一个关键节点都有人负责、有人沟通、有人托底，这让我们非常安心。",
+  "流程清晰、节奏稳，家长和孩子都更有方向感。",
+  "团队专业且细致，关键节点都有明确支持。",
+  "不仅帮助录取，更帮助孩子建立长期竞争力。",
 ];
 
-export default function Page() {
+export default function MediaCoveragePage() {
   return (
-    <main className="bg-gradient-to-b from-zinc-100 via-white to-blue-50">
-      <section className="mx-auto max-w-7xl px-6 pb-10 pt-16 md:pt-20">
-        <div className="rounded-3xl border border-zinc-300 bg-white p-8 shadow-[0_25px_90px_-45px_rgba(24,24,27,0.5)] md:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-600">Media & Credentials</p>
-          <h1 className="mt-4 text-4xl font-black tracking-tight text-zinc-900 md:text-6xl">2.4 央视背书</h1>
-          <p className="mt-5 max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">
-            我们把信任建立在“可验证”之上：只放最硬的资质证据、最真实的服务口碑、最长期的合作记录。
+    <main className="bg-[#f3f4f6] text-zinc-900">
+      <section className="relative overflow-hidden px-6 pb-16 pt-16 md:pb-20 md:pt-24">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#12285f] via-[#1c3a87] to-[#7f2542]" />
+        <div className="relative mx-auto max-w-7xl rounded-[30px] border border-white/20 bg-white/10 p-8 backdrop-blur md:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">Media & Trust</p>
+          <h1 className="mt-5 text-4xl font-black text-white md:text-6xl">2.4 媒体与资质</h1>
+          <p className="mt-7 max-w-4xl text-base leading-relaxed text-white/90 md:text-lg">
+            我们把信任建立在“可验证”之上：提供可核验的资质证据、真实的服务口碑与长期合作记录。
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-10">
+      <section className="mx-auto max-w-7xl px-6 pb-14">
         <div className="grid gap-4 md:grid-cols-2">
-          <article className="rounded-3xl border border-zinc-200 bg-white p-6 md:p-8">
-            <h2 className="text-2xl font-extrabold text-zinc-900">资质 / 认证（硬证据）</h2>
-            <ul className="mt-5 space-y-3 text-sm leading-relaxed text-zinc-700 md:text-base">
+          <article className="rounded-3xl border border-[#d9e1f0] bg-[#f8fafe] p-7 md:p-8">
+            <h2 className="text-2xl font-black text-[#12285f]">资质 / 认证</h2>
+            <ul className="mt-6 space-y-3 text-sm leading-relaxed text-zinc-700 md:text-base">
               {hardCerts.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#12285f]" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </article>
 
-          <article className="rounded-3xl border border-zinc-200 bg-white p-6 md:p-8">
-            <h2 className="text-2xl font-extrabold text-zinc-900">媒体 / 合作露出</h2>
-            <ul className="mt-5 space-y-3 text-sm leading-relaxed text-zinc-700 md:text-base">
+          <article className="rounded-3xl border border-[#f0d2d7] bg-[#fff7f8] p-7 md:p-8">
+            <h2 className="text-2xl font-black text-[#7f2542]">媒体 / 合作露出</h2>
+            <ul className="mt-6 space-y-3 text-sm leading-relaxed text-zinc-700 md:text-base">
               {mediaPartners.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-sky-600" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#b3362f]" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -73,13 +67,13 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-10">
-        <h2 className="text-2xl font-extrabold text-zinc-900 md:text-3xl">媒体 Logo 墙（占位）</h2>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+      <section className="mx-auto max-w-7xl px-6 pb-14">
+        <h2 className="text-2xl font-black text-[#12285f] md:text-3xl">媒体 Logo 墙（占位）</h2>
+        <div className="mt-7 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           {logoWall.map((logo) => (
             <div
               key={logo}
-              className="rounded-2xl border border-zinc-300 bg-zinc-50 px-4 py-6 text-center text-sm font-bold tracking-wide text-zinc-700"
+              className="rounded-2xl border border-zinc-300 bg-white px-4 py-6 text-center text-sm font-bold tracking-wide text-zinc-700"
             >
               {logo}
             </div>
@@ -88,13 +82,10 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-24">
-        <h2 className="text-2xl font-extrabold text-zinc-900 md:text-3xl">真实客户评价（截句）</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <h2 className="text-2xl font-black text-[#12285f] md:text-3xl">真实客户评价（截句）</h2>
+        <div className="mt-7 grid gap-4 md:grid-cols-3">
           {userQuotes.map((quote) => (
-            <blockquote
-              key={quote}
-              className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-[0_16px_50px_-40px_rgba(24,24,27,0.45)]"
-            >
+            <blockquote key={quote} className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm">
               <p className="text-sm leading-relaxed text-zinc-700">“{quote}”</p>
             </blockquote>
           ))}
@@ -103,14 +94,11 @@ export default function Page() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/about"
-            className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition hover:border-zinc-900"
+            className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition hover:border-[#12285f]"
           >
             返回关于我们
           </Link>
-          <Link
-            href="/contact-assessment"
-            className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-zinc-700"
-          >
+          <Link href="/contact-assessment" className="rounded-xl bg-[#12285f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1c3d8d]">
             预约咨询
           </Link>
         </div>

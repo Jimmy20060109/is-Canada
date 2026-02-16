@@ -18,10 +18,6 @@ const navItems: NavItem[] = [
   {
     label: "首页 Home",
     href: "/",
-    children: [
-      { label: "客户证言", href: "/testimonials" },
-      { label: "CTA ① 填表评估", href: "/assessment" },
-    ],
   },
   {
     label: "关于我们",
@@ -31,7 +27,7 @@ const navItems: NavItem[] = [
       { label: "2.1 总部所在", href: "/about/headquarters" },
       { label: "2.2 创始人故事", href: "/about/founder-story" },
       { label: "2.3 为什么是我们", href: "/about/why-us" },
-      { label: "2.4 央视背书", href: "/about/media-coverage" },
+      { label: "2.4 媒体与资质", href: "/about/media-coverage" },
     ],
   },
   {

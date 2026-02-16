@@ -1,74 +1,101 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const aboutModules = [
   {
     id: "2.1",
     title: "总部所在",
     href: "/about/headquarters",
-    desc: "总部介绍、教育局 ISP 资源、央视访谈与媒体露出。",
+    desc: "了解总部位置、本地教育网络与官方项目资源。",
+    tone: "from-[#b3362f] to-[#7f2542]",
   },
   {
     id: "2.2",
     title: "创始人故事",
     href: "/about/founder-story",
-    desc: "人生故事短视频、公众号长文、媒体文字版与品牌轨迹。",
+    desc: "认识创始团队经历，以及方法论如何形成与落地。",
+    tone: "from-[#1f3c88] to-[#12285f]",
   },
   {
     id: "2.3",
     title: "为什么是我们",
     href: "/about/why-us",
-    desc: "系统化方法、本地资源深度、结果导向的服务差异化。",
+    desc: "查看我们与常规留学服务在策略与执行上的差异。",
+    tone: "from-[#3f2b96] to-[#1b2f6e]",
   },
   {
     id: "2.4",
-    title: "央视背书",
+    title: "媒体与资质",
     href: "/about/media-coverage",
-    desc: "核心资质、媒体合作、真实家长评价与信任证据。",
+    desc: "集中展示媒体报道、专业资质与家长口碑。",
+    tone: "from-[#a7374a] to-[#12285f]",
   },
 ];
 
 const certifications = [
   "加拿大本地教育服务机构合规运营",
-  "国际认证青少年生涯规划师团队",
+  "国际认证青少年生涯规划顾问团队",
   "加拿大多地教育局/学校合作通道",
   "中加双语跨文化升学顾问体系",
-  "升学规划与海外守护双闭环服务",
+  "升学规划与海外守护一体化服务",
 ];
 
 const mediaExposure = [
-  "央视相关访谈内容露出",
-  "加拿大教育局与 ISP 资源链接",
+  "央视栏目采访与内容露出",
+  "教育局 ISP 官方资源对接",
   "本地学校与合作机构联合活动",
-  "家长社群与公开讲座持续输出",
+  "家长社群公开讲座持续输出",
 ];
 
 const testimonials = [
-  "关于孩子出国留学，我们家庭做得最正确的一件事，就是选择您做我们的留学顾问。您非常有爱心、做事又清晰、条理，阅历又非常好，未来几年还请你们继续对学业、生活等予以引导、规划、鼓励！",
-  "收到爱普比通知书非常惊喜！很感谢你们团队的帮助，整个过程所体现的专业性和热情，让我们全家表示由衷的赞叹！🌹🌹🌹",
-  "最难得的是你们不只关注录取结果，还一直在帮助孩子建立长期成长能力和自我方向感。",
+  "从择校到落地，每一步都清晰可执行。",
+  "团队专业且响应及时，让家长真正省心。",
+  "不仅关注录取，更关注孩子的长期成长。",
 ];
 
-export default function Page() {
+const successFactors = [
+  "孩子主动乐观的成长心态",
+  "家庭持续且稳定的支持",
+  "本地专业团队长期陪跑",
+];
+
+const nineServices = [
+  "求学准备",
+  "初到安置",
+  "官方监护",
+  "沟通反馈",
+  "学业帮助",
+  "融入西方",
+  "紧急救援",
+  "交通接送",
+  "个人成长",
+];
+
+export default function AboutPage() {
   return (
-    <main className="bg-gradient-to-b from-rose-50 via-white to-blue-50">
-      <section className="mx-auto max-w-7xl px-6 pb-10 pt-16 md:pt-20">
-        <div className="rounded-3xl border border-rose-100 bg-white/90 p-8 shadow-[0_25px_90px_-45px_rgba(190,24,93,0.35)] md:p-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">About IS-Canada</p>
-          <h1 className="mt-4 text-4xl font-black tracking-tight text-zinc-900 md:text-6xl">2.0 关于我们</h1>
-          <p className="mt-5 max-w-4xl text-base leading-relaxed text-zinc-700 md:text-lg">
-            我们相信：留学不只是一次申请，而是一个家庭的长期教育投资。
-            爱思加以“规划 + 申请 + 海外守护”一体化方式，帮助孩子在国际教育中持续成长。
+    <main className="bg-[#f3f4f6] text-zinc-900">
+      <section className="relative overflow-hidden px-6 pb-16 pt-16 md:pb-20 md:pt-24">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#10235a] via-[#182f73] to-[#8e2f4f]" />
+        <div className="absolute -right-20 top-8 h-64 w-64 rounded-full bg-white/15 blur-3xl" />
+        <div className="absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-[#ff8aa2]/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl rounded-[32px] border border-white/20 bg-white/10 p-8 backdrop-blur-md md:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">About Us</p>
+          <h1 className="mt-5 text-4xl font-black text-white md:text-6xl">2.0 关于我们</h1>
+          <p className="mt-7 max-w-4xl text-base leading-relaxed text-white/90 md:text-lg">
+            留学不只是一次申请，而是一个家庭的长期教育决策。爱思加以“规划 + 申请 + 海外守护”一体化模式，
+            帮助学生稳步成长、帮助家长放心托付。
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+
+          <div className="mt-9 flex flex-wrap gap-3">
             <Link
               href="/contact-assessment"
-              className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-zinc-700"
+              className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[#12285f] transition hover:bg-zinc-100"
             >
               预约咨询
             </Link>
             <Link
               href="/assessment"
-              className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition hover:border-zinc-900"
+              className="rounded-xl border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
             >
               先做评估
             </Link>
@@ -76,80 +103,166 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-12">
-        <h2 className="text-2xl font-extrabold text-zinc-900 md:text-3xl">关于我们模块</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-6 pb-14 md:pb-16">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-10">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#7f2542]">品牌主张</p>
+            <h2 className="mt-3 text-3xl font-black text-[#12285f] md:text-4xl">
+              以跨文化理解为基础，用本地化执行支持长期成长
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-zinc-700 md:text-lg">
+              面对语言、课程、生活与社交的多重挑战，我们坚持用“规划 + 申请 + 守护”闭环服务，
+              把复杂问题拆成可执行步骤，让每个阶段都有人负责、有人跟进、有人托底。
+            </p>
+          </div>
+
+          <div className="my-8 h-px w-full bg-zinc-200" />
+
+          <div>
+            <p className="text-xl font-black text-[#b3362f] md:text-2xl">国际学生成功的关键是什么？</p>
+            <div className="mt-5 grid gap-3 md:grid-cols-3">
+              {successFactors.map((item) => (
+                <article key={item} className="rounded-2xl border border-zinc-200 bg-[#fafbff] p-5">
+                  <p className="text-base font-semibold leading-relaxed text-zinc-800">{item}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="my-8 h-px w-full bg-zinc-200" />
+
+          <div>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h2 className="text-3xl font-black text-[#12285f] md:text-4xl">九大境外教育服务</h2>
+              <Link
+                href="/services/overseas-8-support"
+                className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-800 transition hover:border-[#12285f]"
+              >
+                查看完整服务页
+              </Link>
+            </div>
+            <p className="mt-4 text-sm text-zinc-600 md:text-base">
+              从入学准备到在加成长，覆盖学习、生活、监护与融入的关键节点。
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {nineServices.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-[#d9e1f0] bg-[#f8fafe] px-4 py-3 text-base font-semibold text-[#12285f]"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-14 md:pb-18">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <h2 className="text-3xl font-black text-[#12285f] md:text-4xl">关于我们 · 四个部分</h2>
+          <p className="text-sm font-medium text-zinc-500">点击卡片进入对应页面</p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
           {aboutModules.map((item) => (
             <article
               key={item.id}
-              className="group rounded-3xl border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_-40px_rgba(24,24,27,0.45)] transition hover:-translate-y-0.5 hover:shadow-[0_30px_80px_-45px_rgba(37,99,235,0.35)]"
+              className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="flex items-center justify-between gap-3">
-                <p className="text-sm font-bold text-rose-600">{item.id}</p>
-                <Link
-                  href={item.href}
-                  className="rounded-lg border border-zinc-300 px-3 py-1 text-xs font-semibold text-zinc-700 transition group-hover:border-zinc-900"
-                >
-                  查看详情
-                </Link>
+              <div className={`h-1.5 w-full bg-gradient-to-r ${item.tone}`} />
+              <div className="p-7 md:p-8">
+                <div className="flex items-center justify-between gap-3">
+                  <p className="rounded-full bg-[#f1f4fb] px-3 py-1 text-xs font-bold text-[#12285f]">{item.id}</p>
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center rounded-lg border border-zinc-300 px-3 py-1.5 text-xs font-semibold text-zinc-700 transition group-hover:border-[#12285f] group-hover:text-[#12285f]"
+                  >
+                    查看详情
+                  </Link>
+                </div>
+                <h3 className="mt-5 text-2xl font-bold text-zinc-900">{item.title}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600 md:text-base">{item.desc}</p>
               </div>
-              <h3 className="mt-3 text-2xl font-bold text-zinc-900">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-600 md:text-base">{item.desc}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-24">
-        <div className="rounded-3xl border border-zinc-200 bg-zinc-900 p-6 text-white md:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-300">2.4 央视背书（底部摘要）</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl">信任来自可验证的硬证据</h2>
+      <section className="mx-auto max-w-7xl px-6 pb-14">
+        <div className="grid gap-4 md:grid-cols-2">
+          <article className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-9">
+            <h2 className="text-2xl font-black text-[#12285f] md:text-3xl">机构说明</h2>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-700 md:text-base">
+              IS-Canada（International Students Canada）是在加拿大正规注册运营的教育服务机构，
+              长期服务计划就读初高中的国际学生家庭。我们致力于为学生解决海外学习、生活与融入中的真实问题。
+            </p>
+          </article>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <article className="rounded-2xl border border-zinc-700 bg-zinc-800/70 p-5">
-              <h3 className="text-lg font-bold">资质 / 认证</h3>
-              <ul className="mt-3 space-y-2 text-sm text-zinc-200">
+          <article className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-9">
+            <h2 className="text-2xl font-black text-[#12285f] md:text-3xl">宗旨与愿景</h2>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-700 md:text-base">
+              我们以关爱、尊重、专业与责任为服务底层，帮助学生在安全前提下快速适应新环境，
+              建立学习能力、社交能力与长期发展方向，让留学经历真正成为受益终生的成长资产。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-18 md:pb-24">
+        <div className="rounded-[32px] border border-zinc-200 bg-white p-7 shadow-sm md:p-11">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#7f2542]">2.4 媒体与资质</p>
+              <h2 className="mt-3 text-3xl font-black text-[#12285f] md:text-4xl">信任来自可验证的证据</h2>
+            </div>
+            <Link
+              href="/about/media-coverage"
+              className="rounded-xl bg-[#12285f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1a3a86]"
+            >
+              查看完整介绍
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            <article className="rounded-2xl border border-[#d9e1f0] bg-[#f8fafe] p-5">
+              <h3 className="text-lg font-bold text-[#12285f]">资质 / 认证</h3>
+              <ul className="mt-3 space-y-2 text-sm text-zinc-700">
                 {certifications.map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#12285f]" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </article>
 
-            <article className="rounded-2xl border border-zinc-700 bg-zinc-800/70 p-5">
-              <h3 className="text-lg font-bold">媒体 / 合作露出</h3>
-              <ul className="mt-3 space-y-2 text-sm text-zinc-200">
+            <article className="rounded-2xl border border-[#f0d2d7] bg-[#fff8f9] p-5">
+              <h3 className="text-lg font-bold text-[#7f2542]">媒体 / 合作露出</h3>
+              <ul className="mt-3 space-y-2 text-sm text-zinc-700">
                 {mediaExposure.map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-sky-400" />
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#b3362f]" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </article>
 
-            <article className="rounded-2xl border border-zinc-700 bg-zinc-800/70 p-5">
-              <h3 className="text-lg font-bold">真实客户评价</h3>
-              <div className="mt-3 space-y-3 text-sm text-zinc-200">
+            <article className="rounded-2xl border border-zinc-200 bg-white p-5">
+              <h3 className="text-lg font-bold text-zinc-900">家长反馈</h3>
+              <div className="mt-3 space-y-3 text-sm text-zinc-700">
                 {testimonials.map((quote) => (
-                  <blockquote key={quote} className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-3 leading-relaxed">
+                  <blockquote key={quote} className="rounded-xl border border-zinc-200 bg-zinc-50 p-3 leading-relaxed">
                     “{quote}”
                   </blockquote>
                 ))}
               </div>
             </article>
           </div>
-
-          <Link
-            href="/about/media-coverage"
-            className="mt-7 inline-flex rounded-xl bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-200"
-          >
-            查看央视背书完整页
-          </Link>
         </div>
       </section>
     </main>
   );
 }
+
