@@ -4,10 +4,12 @@ import graphQLClient from "@/lib/graphql-client";
 import { GET_HOME_PAGE_FALLBACK, GET_HOME_PAGE_WITH_ACF } from "@/lib/queries";
 import type { HomePageFallbackResponse, HomePageWithAcfResponse } from "@/lib/types";
 import CoreServicesSection from "./components/CoreServicesSection";
+import HomeVideoSwitcher from "./components/HomeVideoSwitcher";
 
 const HOME_URI = process.env.NEXT_PUBLIC_HOME_URI || "/home/";
 const HERO_BG_IMAGE = "/HomePage Resources/national-cancer-institute-N_aihp118p8-unsplash.jpg";
 const HERO_LOGO_IMAGE = "/HomePage Resources/red logo.png";
+const FOUNDER_PORTRAIT_IMAGE = "/HomePage Resources/创世人照片.jpg";
 
 type HomeText = {
   title: string;
@@ -161,17 +163,15 @@ export default async function Home() {
           </div>
 
           <aside className="rounded-[28px] border border-zinc-200 bg-gradient-to-b from-[#12285f] to-[#1d2d69] p-5 shadow-sm md:p-6">
-            <div className="flex h-full flex-col rounded-2xl border border-white/15 bg-white/5 p-4 backdrop-blur-sm">
-              <p className="text-sm font-semibold tracking-wide text-white/85">Founder Portrait</p>
-              <div className="mt-3 flex min-h-[440px] flex-1 items-center justify-center rounded-2xl border border-dashed border-white/35 bg-white/10 text-center">
-                <div>
-                  <p className="text-lg font-semibold text-white">创始人照片预留位</p>
-                  <p className="mt-2 text-sm text-white/80">
-                    后续替换为甲方照片
-                    <br />
-                    建议尺寸：1200 × 1500
-                  </p>
-                </div>
+            <div className="flex h-full flex-col p-1">
+              <div className="relative min-h-[440px] flex-1 overflow-hidden rounded-2xl border border-white/25 bg-white/10">
+                <Image
+                  src={FOUNDER_PORTRAIT_IMAGE}
+                  alt="创始人肖像"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
               </div>
             </div>
           </aside>
@@ -180,26 +180,24 @@ export default async function Home() {
 
       <section className="px-6 pb-16 md:pb-24">
         <div className="mx-auto max-w-7xl rounded-[28px] border border-zinc-200 bg-white p-6 shadow-sm md:p-10">
-          <div className="rounded-2xl border border-[#d9e1f0] bg-[#f8fafe] px-6 py-5">
-            <p className="text-lg font-bold text-[#12285f] md:text-xl">媒体报道：CCTV《大国匠心》合作伙伴</p>
-            <p className="mt-2 text-sm text-zinc-600 md:text-base">节目原片：20 分钟完整版、10 分钟精编版。</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              <span className="rounded-full bg-[#12285f] px-3 py-1 text-xs font-semibold text-white">20 分钟完整版</span>
-              <span className="rounded-full bg-[#7f2542] px-3 py-1 text-xs font-semibold text-white">10 分钟精编版</span>
-            </div>
-          </div>
-
-          <div className="mt-5 rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-4 md:p-6">
-            <div className="flex aspect-video w-full items-center justify-center rounded-xl bg-white text-center">
-              <div>
-                <p className="text-lg font-semibold text-zinc-800">视频预留位</p>
-                <p className="mt-2 text-sm text-zinc-500">
-                  后续替换为宣传视频
-                  <br />
-                  建议比例：16:9
-                </p>
+          <div className="grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
+            <div className="rounded-2xl border border-[#d9e1f0] bg-gradient-to-b from-[#f8fafe] to-[#eef3ff] p-6 md:p-7">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#7f2542]">Media Feature</p>
+              <h2 className="mt-3 text-2xl font-black leading-tight text-[#12285f] md:text-3xl">
+                CCTV《大国匠心》
+                <br />
+                合作伙伴专题
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-zinc-600 md:text-base">
+                通过视频内容展示团队方法论、真实案例与长期服务成果。
+                视频支持版本切换，后续可继续追加更多媒体素材。
+              </p>
+              <div className="mt-5 inline-flex rounded-full border border-[#b3362f]/30 bg-[#fff3f2] px-3 py-1 text-xs font-semibold text-[#b3362f]">
+                视频模块
               </div>
             </div>
+
+            <HomeVideoSwitcher />
           </div>
         </div>
       </section>

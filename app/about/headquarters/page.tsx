@@ -1,11 +1,11 @@
-﻿import Image from "next/image";
-import Link from "next/link";
+﻿import ImageCarousel from "@/app/components/ImageCarousel";
+import ZoomableImage from "@/app/components/ZoomableImage";
 
 const locationHighlights = [
-  "总部位于安省南部荷顿地区（Halton Region），属大多伦多地区（GTA）。",
-  "距多伦多市中心与皮尔逊国际机场约 30 分钟车程。",
-  "距尼亚加拉大瀑布与美加边境约 1 小时车程。",
-  "核心覆盖城市：奥克维尔（Oakville）、伯灵顿（Burlington）、米尔顿（Milton）、荷顿山（Halton Hills）。",
+  "总部位于安省荷顿地区，处于 GTA 西部教育与生活核心圈。",
+  "距多伦多市中心及皮尔逊国际机场约 30 分钟车程，通勤高效。",
+  "距尼亚加拉大瀑布与美加边境约 1 小时车程，周末出行便捷。",
+  "核心服务覆盖奥克维尔、伯灵顿、米尔顿与荷顿山四大城市。",
 ];
 
 const educationHighlights = [
@@ -33,16 +33,21 @@ const economyHighlights = [
   "为学生长期发展与职业探索提供稳定且多样化环境。",
 ];
 
-const imageSlots = [
+const universityPlaceholderSlides = [
   {
-    title: "学校与学生实拍",
-    note: "建议提供布莱斯、麦克拉克伦、圣洛约拉、曼特学校学生场景",
-    ratio: "4:3，建议 2000×1500",
+    src: "/Universities/ABUIABACGAAglOLrkAYomrLl8wYwsgU48gI.jpg",
+    alt: "University placeholder photo 1",
+    caption: "样板图 01：可替换为学校或校园活动实拍",
   },
   {
-    title: "体育与城市活动图",
-    note: "建议提供奥克维尔成长的皮划艇冠军 Adam / 加拿大公开赛球场等",
-    ratio: "16:9，建议 2400×1350",
+    src: "/Universities/OIP.webp",
+    alt: "University placeholder photo 2",
+    caption: "样板图 02：可替换为课堂或城市学习场景",
+  },
+  {
+    src: "/Universities/R.jpg",
+    alt: "University placeholder photo 3",
+    caption: "样板图 03：可替换为校园设施或团队活动",
   },
 ];
 
@@ -61,7 +66,7 @@ export default function HeadquartersPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-12">
+      <section className="mx-auto max-w-7xl px-6 pt-10 pb-12 md:pt-14">
         <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-10">
           <h2 className="text-3xl font-black text-[#12285f] md:text-4xl">区位与城市覆盖</h2>
           <ul className="mt-6 grid gap-3 md:grid-cols-2">
@@ -73,19 +78,16 @@ export default function HeadquartersPage() {
           </ul>
 
           <div className="mt-7 grid gap-4 md:grid-cols-2">
-            <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/10] w-full">
-                <Image src="/about us resources/town_of_oakville_cover.jpg" alt="奥克维尔城市景观" fill className="object-cover" />
-              </div>
-              <figcaption className="px-4 py-3 text-sm font-medium text-zinc-700">奥克维尔城市景观</figcaption>
-            </figure>
-
-            <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-              <div className="relative aspect-[16/10] w-full">
-                <Image src="/about us resources/Burlington_Aerial_view_2024.jpg" alt="伯灵顿航拍景观" fill className="object-cover" />
-              </div>
-              <figcaption className="px-4 py-3 text-sm font-medium text-zinc-700">伯灵顿航拍景观</figcaption>
-            </figure>
+            <ZoomableImage
+              src="/about us resources/town_of_oakville_cover.jpg"
+              alt="奥克维尔城市景观"
+              caption="奥克维尔城市景观"
+            />
+            <ZoomableImage
+              src="/about us resources/Burlington_Aerial_view_2024.jpg"
+              alt="伯灵顿航拍景观"
+              caption="伯灵顿航拍景观"
+            />
           </div>
         </div>
       </section>
@@ -110,9 +112,9 @@ export default function HeadquartersPage() {
             ))}
           </ul>
 
-          <div className="mt-7 rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-4 md:p-5">
-            <p className="text-sm font-semibold text-zinc-700">图片预留位 02：学校与学生实拍</p>
-            <p className="mt-1 text-xs text-zinc-500">建议内容：布莱斯、麦克拉克伦、圣洛约拉、曼特学校学生场景；比例 4:3（2000×1500）</p>
+          <div className="mt-7">
+            <p className="mb-3 text-sm font-semibold text-zinc-700">图片预留位 02：学校与学生实拍（轮播样板）</p>
+            <ImageCarousel slides={universityPlaceholderSlides} />
           </div>
         </div>
       </section>
@@ -137,42 +139,17 @@ export default function HeadquartersPage() {
             ))}
           </ul>
 
-          <div className="mt-7 rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-4 md:p-5">
-            <p className="text-sm font-semibold text-zinc-700">图片预留位 03：体育与城市活动</p>
-            <p className="mt-1 text-xs text-zinc-500">建议内容：奥运皮划艇冠军 Adam、加拿大公开赛球场、社区活动；比例 16:9（2400×1350）</p>
+          <div className="mt-7">
+            <p className="mb-3 text-sm font-semibold text-zinc-700">图片预留位 03：体育与城市活动（轮播样板）</p>
+            <ImageCarousel slides={universityPlaceholderSlides} />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-24">
-        <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-10">
-          <h2 className="text-3xl font-black text-[#12285f] md:text-4xl">图片素材清单（待你提供）</h2>
-          <div className="mt-6 grid gap-3 md:grid-cols-2">
-            {imageSlots.map((slot) => (
-              <article key={slot.title} className="rounded-2xl border border-zinc-200 bg-[#fafbff] p-5">
-                <p className="text-base font-bold text-zinc-900">{slot.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-700">{slot.note}</p>
-                <p className="mt-2 text-xs font-medium text-zinc-500">{slot.ratio}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/about/media-coverage"
-              className="rounded-xl bg-[#12285f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1c3d8d]"
-            >
-              查看媒体与资质
-            </Link>
-            <Link
-              href="/contact-assessment"
-              className="rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition hover:border-[#12285f]"
-            >
-              咨询总部顾问团队
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
+
+
+
+

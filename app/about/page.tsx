@@ -86,24 +86,10 @@ export default function AboutPage() {
             帮助学生稳步成长、帮助家长放心托付。
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Link
-              href="/contact-assessment"
-              className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-[#12285f] transition hover:bg-zinc-100"
-            >
-              预约咨询
-            </Link>
-            <Link
-              href="/assessment"
-              className="rounded-xl border border-white/35 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
-            >
-              先做评估
-            </Link>
-          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-14 md:pb-16">
+      <section className="mx-auto max-w-7xl px-6 pt-10 pb-14 md:pt-14 md:pb-16">
         <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-10">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#7f2542]">品牌主张</p>
@@ -135,7 +121,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="text-3xl font-black text-[#12285f] md:text-4xl">九大境外教育服务</h2>
               <Link
-                href="/services/overseas-8-support"
+                href="/services"
                 className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-800 transition hover:border-[#12285f]"
               >
                 查看完整服务页
@@ -158,38 +144,32 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-14 md:pb-18">
+      <section className="mx-auto max-w-7xl px-6 pt-6 pb-14 md:pt-10 md:pb-18">
         <div className="mb-8 flex items-end justify-between gap-4">
           <h2 className="text-3xl font-black text-[#12285f] md:text-4xl">关于我们 · 四个部分</h2>
           <p className="text-sm font-medium text-zinc-500">点击卡片进入对应页面</p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           {aboutModules.map((item) => (
-            <article
+            <Link
               key={item.id}
+              href={item.href}
               className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
               <div className={`h-1.5 w-full bg-gradient-to-r ${item.tone}`} />
-              <div className="p-7 md:p-8">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="rounded-full bg-[#f1f4fb] px-3 py-1 text-xs font-bold text-[#12285f]">{item.id}</p>
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center rounded-lg border border-zinc-300 px-3 py-1.5 text-xs font-semibold text-zinc-700 transition group-hover:border-[#12285f] group-hover:text-[#12285f]"
-                  >
-                    查看详情
-                  </Link>
-                </div>
-                <h3 className="mt-5 text-2xl font-bold text-zinc-900">{item.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-600 md:text-base">{item.desc}</p>
+              <div className="p-8 md:p-10">
+                <p className="text-base font-bold tracking-wide text-[#12285f]">{item.id}</p>
+                <h3 className="mt-4 text-4xl font-black leading-tight text-zinc-900 md:text-5xl">{item.title}</h3>
+                <p className="mt-5 text-xl leading-relaxed text-zinc-700 md:text-2xl">{item.desc}</p>
+                <p className="mt-6 text-lg font-semibold text-[#12285f] transition group-hover:text-[#1a3a86]">查看详情</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-14">
+      <section className="mx-auto max-w-7xl px-6 pt-6 pb-14 md:pt-10">
         <div className="grid gap-4 md:grid-cols-2">
           <article className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm md:p-9">
             <h2 className="text-2xl font-black text-[#12285f] md:text-3xl">机构说明</h2>
@@ -209,7 +189,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-18 md:pb-24">
+      <section className="mx-auto max-w-7xl px-6 pt-6 pb-18 md:pt-10 md:pb-24">
         <div className="rounded-[32px] border border-zinc-200 bg-white p-7 shadow-sm md:p-11">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>

@@ -95,3 +95,40 @@ body {
     animation: none;
   }
 }
+
+@keyframes media-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes media-marquee-reverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.media-marquee-track {
+  animation: media-marquee 48s linear infinite;
+  will-change: transform;
+}
+
+.media-marquee-track-reverse {
+  animation: media-marquee-reverse 56s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-marquee-track,
+  .media-marquee-track-reverse {
+    animation: none;
+  }
+}
