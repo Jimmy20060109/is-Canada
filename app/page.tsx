@@ -150,16 +150,16 @@ export default async function Home() {
               ))}
             </div>
 
-            <div className="mt-6 grid gap-3">
+            <ul className="mt-6 grid gap-3">
               {REASON_LIST.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl border border-zinc-200 bg-white px-4 py-3 text-base font-medium text-zinc-700"
-                >
+                <li key={item} className="rounded-xl border border-zinc-200 bg-white px-4 py-3 text-sm font-semibold text-zinc-700 md:text-base">
+                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#12285f] text-xs font-bold text-white">
+                    ✓
+                  </span>
                   {item}
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <aside className="rounded-[28px] border border-zinc-200 bg-gradient-to-b from-[#12285f] to-[#1d2d69] p-5 shadow-sm md:p-6">

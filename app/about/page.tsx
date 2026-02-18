@@ -78,7 +78,7 @@ export default function AboutPage() {
         <div className="absolute -right-20 top-8 h-64 w-64 rounded-full bg-white/15 blur-3xl" />
         <div className="absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-[#ff8aa2]/20 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl rounded-[32px] border border-white/20 bg-white/10 p-8 backdrop-blur-md md:p-12">
+        <div className="relative mx-auto max-w-7xl px-2 md:px-4">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">About Us</p>
           <h1 className="mt-5 text-4xl font-black text-white md:text-6xl">2.0 关于我们</h1>
           <p className="mt-7 max-w-4xl text-base leading-relaxed text-white/90 md:text-lg">
@@ -130,11 +130,11 @@ export default function AboutPage() {
             <p className="mt-4 text-sm text-zinc-600 md:text-base">
               从入学准备到在加成长，覆盖学习、生活、监护与融入的关键节点。
             </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 flex flex-wrap gap-2">
               {nineServices.map((item) => (
                 <div
                   key={item}
-                  className="rounded-xl border border-[#d9e1f0] bg-[#f8fafe] px-4 py-3 text-base font-semibold text-[#12285f]"
+                  className="rounded-full border border-[#d9e1f0] bg-white px-4 py-2 text-sm font-semibold text-[#12285f]"
                 >
                   {item}
                 </div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
             </article>
 
             <article className="rounded-2xl border border-[#f0d2d7] bg-[#fff8f9] p-5">
-              <h3 className="text-lg font-bold text-[#7f2542]">媒体 / 合作露出</h3>
+              <h3 className="text-lg font-bold text-[#7f2542]">媒体 / 合作报道</h3>
               <ul className="mt-3 space-y-2 text-sm text-zinc-700">
                 {mediaExposure.map((item) => (
                   <li key={item} className="flex items-start gap-2">

@@ -113,7 +113,7 @@ export default function HeadquartersPage() {
           </ul>
 
           <div className="mt-7">
-            <p className="mb-3 text-sm font-semibold text-zinc-700">图片预留位 02：学校与学生实拍（轮播样板）</p>
+            <p className="mb-3 text-sm font-semibold text-zinc-700">校园场景轮播（示例）</p>
             <ImageCarousel slides={universityPlaceholderSlides} />
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function HeadquartersPage() {
           </ul>
 
           <div className="mt-7">
-            <p className="mb-3 text-sm font-semibold text-zinc-700">图片预留位 03：体育与城市活动（轮播样板）</p>
+            <p className="mb-3 text-sm font-semibold text-zinc-700">城市与活动轮播（示例）</p>
             <ImageCarousel slides={universityPlaceholderSlides} />
           </div>
         </div>

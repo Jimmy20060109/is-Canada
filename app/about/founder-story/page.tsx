@@ -119,9 +119,9 @@ export default function FounderStoryPage() {
             </div>
 
             <aside className="rounded-2xl border border-[#d9e1f0] bg-[#f8fafe] p-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7f2542]">Wechat Articles</p>
-              <h3 className="mt-2 text-lg font-black text-[#12285f]">微信文章目录</h3>
-              <p className="mt-2 text-xs text-zinc-600">点击条目进入原文</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#7f2542]">Wechat Articles</p>
+              <h3 className="mt-2 text-lg font-black text-[#12285f]">微信文章资料卡</h3>
+              <p className="mt-2 text-xs text-zinc-600">点击条目进入原文，可持续更新</p>
 
               <div className="mt-3 space-y-2">
                 {wechatArticles.map((item) => (
@@ -132,7 +132,10 @@ export default function FounderStoryPage() {
                     rel="noopener noreferrer"
                     className="group block rounded-lg border border-[#e4e8f2] bg-white px-3 py-2.5 transition hover:border-[#12285f] hover:bg-[#fdfefe]"
                   >
-                    <p className="text-[11px] font-semibold tracking-wide text-[#7f2542]">{item.meta}</p>
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="text-[11px] font-semibold tracking-wide text-[#7f2542]">{item.meta}</p>
+                      <span className="text-xs font-semibold text-[#12285f]">→</span>
+                    </div>
                     <p className="mt-1 text-sm font-bold text-[#12285f]">{item.name}</p>
                     <p className="mt-1 text-xs leading-relaxed text-zinc-600">{item.title}</p>
                   </a>

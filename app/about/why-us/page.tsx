@@ -53,7 +53,7 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-14">
+      <section className="mx-auto max-w-7xl px-6 pt-10 pb-14 md:pt-14">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h2 className="text-2xl font-black text-[#12285f] md:text-3xl">核心差异对比：先看痛点，再看解决方案</h2>
@@ -102,32 +102,26 @@ export default function WhyUsPage() {
               <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#12285f]">Module A</p>
               <h3 className="mt-2 text-lg font-bold text-[#12285f]">5 大系统规划</h3>
               <p className="mt-2 text-sm text-zinc-600">覆盖申请、选课、专业与大学路径。</p>
-              <details open className="mt-4">
-                <summary className="cursor-pointer text-sm font-semibold text-[#12285f]">展开 5 项内容</summary>
-                <div className="mt-3 grid gap-2">
-                  {systemPlanning.map((item) => (
-                    <div key={item} className="rounded-lg border border-[#c6d4f3] bg-white px-3 py-2 text-sm font-semibold text-[#12285f]">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </details>
+              <ul className="mt-4 grid gap-2 text-sm font-semibold text-[#12285f] sm:grid-cols-2">
+                {systemPlanning.map((item) => (
+                  <li key={item} className="rounded-lg border border-[#c6d4f3] bg-white px-3 py-2">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </article>
 
             <article className="rounded-2xl border border-zinc-200 bg-white p-5">
               <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#7f2542]">Module B</p>
               <h3 className="mt-2 text-lg font-bold text-zinc-900">8 大海外守护</h3>
               <p className="mt-2 text-sm text-zinc-600">学习、生活、应急与融入全链条支持。</p>
-              <details open className="mt-4">
-                <summary className="cursor-pointer text-sm font-semibold text-[#7f2542]">展开 8 项守护</summary>
-                <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                  {overseasGuard.map((item) => (
-                    <div key={item} className="rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2 text-sm font-semibold text-zinc-700">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </details>
+              <ul className="mt-4 grid gap-2 text-sm font-semibold text-zinc-700 sm:grid-cols-2">
+                {overseasGuard.map((item) => (
+                  <li key={item} className="rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </article>
 
             <article className="rounded-2xl border border-zinc-200 bg-white p-5">
